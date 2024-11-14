@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 6 => 1,2,3,4,5,6
+    // số nguyên tố : 2,3,5,7,11,13,17..... => là số chỉ chia hết cho 1 và chính nó. => snt chỉ có 2 ước
+    // a ước là gì của b :  => b chia hết cho a => b là bôi của a
+    // bội số chung 2 số là gì? // c là bội chung của a và b => c chia hết cả a và b
+
+    // kiểm tra một số có phải là snt hay không?
+    //  let number =+prompt("nhập 1 số");
+     // kiểm tra xem number có bao nhiêu ước
+      //nếu số lượng ước = 2 => snt
+      // nhiều hơn 2 => không phải?
+    // let count =0;
+    // for (let i = 2; i <number ; i++) {
+    //     if (number%i==0){
+    //         count++;
+    //     }
+    // }
+    // alert("count: "+ count)
+    // if (count==0){
+    //     alert("snt")
+    // }else {
+    //     alert("not snt")
+    // }
+    // cách 2
+    // let check =true;
+    // for (let i = 2; i <number ; i++) {
+    //     if (number%i==0){
+    //        check = false;
+    //        break;
+    //     }
+    // }
+    //
+    // if (check==true){
+    //     alert("snt")
+    // }else {
+    //     alert("not snt")
+    // }
+     // in ra các số từ 1=>100 => nếu i = n? thi không in nữa
+     // 1 => nhương không in các số là bội của 10; mà thay thế bằng từ "ok"
+    // for (let i = 0; i <100 ; i++) {
+    //    if (i%10==0){
+    //        console.log("Ok");
+    //        continue;
+    //    }
+    //
+    // }
+    // let i =0
+    // for (;;){
+    //     i++;
+    // }
+    // let i =0;
+    // while (i<100){
+    //     console.log(i);
+    //     i++;
+    // }
+
+    // không biết trước làn lặp
+    // nhập dữ liệu từ bàn phím nếu là só nguyên dương thì ok, không phải thì yêu cầu nhập  lại
+
+    // let num = +prompt("nhập số nguyên")
+    // while (num<0){
+    //     num = +prompt("nhập lại")
+    // }
+    // alert("số vừa nhập là : "+ num);
+    let num =0;
+    do {
+        num = +prompt("nhập")
+    }while (num<0);
+</script>
+</body>
+</html>
