@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4">
+            <input id="window">
+        </td>
+    </tr>
+    <tr>
+        <td><input onclick="nhap(1)" type="button" value="1"></td>
+        <td><input onclick="nhap(2)" type="button" value="2"></td>
+        <td><input onclick="nhap(3)" type="button" value="3"></td>
+        <td><input onclick="nhap('+')" type="button" value="+"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="4"></td>
+        <td><input type="button" value="5"></td>
+        <td><input type="button" value="6"></td>
+        <td><input type="button" value="-"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="7"></td>
+        <td><input type="button" value="8"></td>
+        <td><input type="button" value="9"></td>
+        <td><input type="button" value="*"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="C"></td>
+        <td><input type="button" value="0"></td>
+        <td><input onclick="tinh()" type="button" value="="></td>
+        <td><input type="button" value="/"></td>
+    </tr>
+
+</table>
+<script>
+    function tinh() {
+        let str = document.getElementById("window").value;
+        let ketQua = eval(str);
+        document.getElementById("window").value = ketQua
+
+    }
+    function nhap(kyTu) {
+        document.getElementById("window").value += kyTu;
+    }
+
+    // function inputOne() {
+    //     // a = a+1;
+    //     // a +=1;
+    //     document.getElementById("window").value += 1;
+    // }
+
+    // function inputTwo() {
+    //     document.getElementById("window").value += 2;
+    // }
+    //
+    // function inputThree() {
+    //     document.getElementById("window").value += 3;
+    //
+    // }
+    //
+    // function inputCong() {
+    //     document.getElementById("window").value += "+";
+    // }
+</script>
+</body>
+</html>

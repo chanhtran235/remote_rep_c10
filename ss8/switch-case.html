@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // nhập vào tháng => số ngày trong tháng
+    let month = +prompt("nhập tháng");// nhập vào chuỗi
+    // if (month == 1 || month == 3 || month == 5 || month == 7) {
+    //     alert(month + "có 31 ngày")
+    // } else if (month == 2) {
+    //     alert(month + "có 28 hoặc 29 ngày")
+    // } else if (month == 4 || month == 6 || month == 9) {
+    //     alert(month + "có 30ngày")
+    // } else {
+    //     alert("tên tháng không đúng")
+    // }
+
+    switch (month) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            alert(month + "có 31 ngày")
+            break;
+        case 2:
+            alert(month + "có 28 hoặc 29 ngày")
+            break
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            alert(month + "có 30ngày")
+            break;
+        default:
+            alert("tên tháng không đúng")
+    }
+
+    // thuế thu nhập các nhân:
+    // Nếu tổng thu nhập trên 12 tri thì phải đống thuế ( chưa giả trừ gia cảnh)
+    // 1 ngờ phụ thuộc  người 3.5 triệu + 3.5
+    // 13 -12 =1tr => phải đống thuế 5% của 1tr.
+
+    // nhập số tiền thu nhập
+    // số người phu thuộc
+
+    let age = + prompt("nhập vào một số");
+    if (0<age&&age<=120){
+        alert("là tuổi")
+    }else {
+        alert('không phải là tuổi')
+    }
+</script>
+</body>
+</html>
