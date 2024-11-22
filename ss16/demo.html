@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // // tạo một đối tượng trực tiếp
+    // let student1 = {
+    //     id: 1,
+    //     name: "chánh1",
+    //     age: 41,
+    //     study: function (subjet) {
+    //         console.log("học viên đang học môn " + subjet);
+    //     }
+    // }
+    // let student2 = {
+    //     id: 2,
+    //     name: "Lưu",
+    //     age: 24,
+    //     study: function (subjet) {
+    //         console.log("học viên đang học môn " + subjet);
+    //     }
+    // }
+    // console.log("tên học viên " + student1.name)
+    // student1.name ="việt"
+    // console.log("tên học viên " + student1.name)
+    // student1.study("Toán");
+    // nếu tạo 1000 học viên => cần có một form (biểu mẫu chung để tạo đối tượng cho nhanh)
+    // tạo class Student
+    class Student {
+        // hàm /method đặc biệt => sử dụng để khởi tạo đối tương bằng từ khoá new
+        // khai báo thuôc tính
+        constructor(ma,ten,tuoi) {
+            this.id =ma;
+            this.name = ten;
+            this.age = tuoi
+        }
+        study(subject){
+            console.log(this.name + ": học viên đang học môn " + subject);
+        }
+    }
+
+    // tạo các dối tượng từ 1 class
+    let sinhVien1 = new Student(1,"viet1",18);
+    let sinhVien2 = new Student(2,"chánh",18);
+    let sinhVien3 = new Student(3,"tuấn",18);
+
+    sinhVien1.study("Văn")
+
+
+
+    //
+</script>
+</body>
+</html>

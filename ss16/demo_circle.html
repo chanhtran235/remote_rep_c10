@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // tên class phải ghi Hoa chữ đầu tiên ( PascalCase)
+    // let Circle = function(radius,color) {
+    //
+    //     this.radius = radius;
+    //     this.color = color;
+    //
+    //     this.getRadius = function() {
+    //         return radius;
+    //     }
+    //     this.getArea = function() {
+    //         return Math.PI * radius * radius;
+    //     }
+    //
+    // };
+
+
+    // cách viết mới của js => 2015 (ES6)
+    class Circle{
+        constructor(radius,color) {
+            this.radius =radius;
+            this.color= color;
+        }
+        getRadius(){
+            return this.radius;
+        }
+        // trả về diện tích hình tròn
+        getArea(){
+            return this.radius*this.radius * Math.PI;
+        }
+    }
+
+    // tạo 1 hình tròn
+    let hinhTron1 = new Circle(10,"red");
+    console.log("bk "+ hinhTron1.getRadius());
+    console.log("dt "+ hinhTron1.getArea());
+</script>
+</body>
+</html>

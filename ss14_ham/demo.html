@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="n">
+<button onclick="ktsnt()">kiểm tra số nguyên tố</button>
+<script>
+    // hàm một khối lệnh để thực hiện 1 cv nào đó
+    // tái  sử dụng mã nguồn
+    // function ktsnt() {
+    //     let num = document.getElementById("n").value;//snt?
+    //     alert(isPrime1(num));
+    // }
+    //
+    // let x = 45; // snt?
+    // alert(isPrime1(x));
+    //
+    // let number = +prompt("nhập một số")// snt?
+    // alert(isPrime1(number))
+
+    // kiểm một số nhập tù bàn phím bằng prompt => snt?
+    // kiểm một số nhập tù bàn phím bằng input => snt?
+    // kiểm một số x bất kỳ => snt?
+    //
+    function isPrime(n) {
+        let count = 0; // đếm số lượng các số chia hết 2,3,4,5,6....n-1
+        for (let i = 2; i < n; i++) {
+            if (n % i == 0) {
+                count++;
+            }
+        }
+        // kiểm tra số nguyên tố
+        if (count == 0) {
+            alert("ok")
+        } else {
+            alert("not")
+        }
+    }
+
+    function isPrime1(n) {
+        if (n < 2) {
+            return false;
+        } else {
+            for (let i = 2; i < n; i++) {
+                if (n % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
+    // in ra các snt có trong magnr
+    let array = [3,5,6,8,9];
+    for (let i = 0; i <array.length ; i++) {
+        if (isPrime1(array[i])){
+            console.log(array[i]);
+        }
+    }
+</script>
+</body>
+</html>

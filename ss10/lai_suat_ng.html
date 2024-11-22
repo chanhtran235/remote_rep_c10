@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // lãi suất ngân hàng
+    // let tienVay = + prompt("nhập tiền vay");//1000
+    // let laiSuat = +prompt("lãi suất tháng");
+    // let soThangVay = +prompt("nhập số tháng cần vay");
+    // for (let i = 1; i <=soThangVay ; i++) {
+    //   let laiThang =  tienVay*laiSuat/100; //100
+    //   tienVay +=laiThang; //1100
+    // }
+    // alert("tổng tiên phải trả: "+ tienVay)
+    // từ điển
+    // let english = ["hello", "you", "i", "apple", "banana"];
+    // let vietnamese = ["xin chào", "bạn", "tôi", "quả táo", "quả chuối"];
+    // let word = prompt("nhập từ cần tra cứu");
+    // let index = -1;
+    // for (let i = 0; i < english.length; i++) {
+    //     if (word === english[i]) {
+    //         index = i;
+    //         break;
+    //     }
+    // }
+    // if (index != -1) {
+    //     alert(word + ": " + vietnamese[index]);
+    // } else {
+    //     alert(word + ": không có trong từ điển");
+    // }
+
+    // Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+    //     Chương trình tìm xem V có nằm trong mảng số nguyên không?
+    //     Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".
+
+    // // cách 1: khởi tạo mảng
+    // let array = [10,20,32,34,3,5,7,8,9,7]; // khởi tạo
+    // // cách 2: nhập mảng từ bàn phím
+    // // nhập độ dài mảng
+    // let n = +prompt("nhập độ dài của mảng");
+    // while (n<0){
+    //     n= +prompt("nhập độ dài mảng:");
+    // }
+    // // nhập phần tử
+    // let array1 = [];
+    // for (let i = 0; i <n ; i++) {
+    //     let element =+prompt("nhập phần tử thứ : "+ i)
+    //     array1.push(element);
+    // }
+    // alert(array1);
+    // // nhập số V bất kỳ ; [0,2,2,3,4,5] => xoá 3 => [0,1,2,4,5,0]
+    // let v = +prompt("nhập số v");
+    // for (let i = 0; i <array1.length ; i++) {
+    //     if (array1[i]==v){
+    //         for (let j = i; j <array1.length-1 ; j++) {
+    //             array1[j]=array1[j+1];
+    //         }
+    //         array1[array1.length-1]=0;
+    //         i--;
+    //     }
+    // }
+    // alert(array1)
+
+    // bài 8
+    let array2 = [10,20,32,34,110,5,8,9,7]; // khởi tạo
+    // sắp xếp theo alphabet
+    array2.sort();
+    alert(array2)
+    // sắp xếp theo giá trị
+    // array2.sort(function (a,b) {
+    //         return a-b;
+    // })
+    array2.sort( (a,b) =>{
+        return a-b;
+    })
+    alert(array2)
+</script>
+</body>
+</html>

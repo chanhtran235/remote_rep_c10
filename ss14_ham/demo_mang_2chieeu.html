@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // mảng 2 chiều là một mảng 1 chiểu, các phần tử bên trong lại là một mảng 1 chiều;
+    // let array = [
+    //     [1,2,3],
+    //     [4,6,7],
+    //     [5,5,2],
+    // ];
+    // for (let i = 0; i <array.length ; i++) {
+    //     for (let j = 0; j <array[i].length ; j++) {
+    //         document.write(array[i][j])
+    //     }
+    //     document.write("<br>")
+    // }
+    let n = + prompt("nhập hàng")
+    let m = + prompt("nhập cột")
+
+    let arr = new Array(n);
+    for (let i = 0; i <arr.length ; i++) {
+        arr[i] = new Array(m);
+        for (let j = 0; j < arr[i].length; j++) {
+            arr[i][j] = + prompt("nhập vào phần tử thứ : "+ i +": "+ j)
+        }
+    }
+
+    let studentList = [
+        [1,"chánh", "nam","DN"],
+        [1,"chánh", "nam","DN"],
+        [1,"chánh", "nam","DN"]
+    ]
+    let studentList = [
+        {id: 1,name:"chánh",gender: "nam",address: "dN"}
+        {id: 1,name:"chánh",gender: "nam",address: "dN"}
+        {id: 1,name:"chánh",gender: "nam",address: "dN"}
+    ]
+</script>
+</body>
+</html>

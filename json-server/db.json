@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "sam sung",
+      "price": 100,
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "name": "Dell",
+      "price": 1000,
+      "categoryId": 2
+    },
+    {
+      "id": 3,
+      "name": "iphone",
+      "price": 2000,
+      "categoryId": 1
+    }
+  ],
+  "categories" : [
+    {
+      "id": 1,
+      "name": "phone"
+    },
+    {
+      "id": 2,
+      "name": "laptop"
+    }
+  ],
+  "orders" : [
+    {
+      "id": 1,
+      "products": [
+        {"productId": 1},
+        {"productId": 2}
+      ],
+      "orderDate": "12-12-2003"
+    },
+    {
+      "id": 2,
+      "products": [
+        {"productId": 2},
+        {"productId": 3}
+      ],
+      "orderDate": "12-12-2004"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "chanhtv",
+      "password": "123",
+      "roles" : "ADMIN"
+    },
+    {
+      "id": 2,
+      "username": "haitt",
+      "password": "123",
+      "roles" : "USER"
+    },
+    {
+      "id": 3,
+      "username": "tiennvt",
+      "password": "123",
+      "roles" : "EMPLOYEE"
+    }
+  ]
+}

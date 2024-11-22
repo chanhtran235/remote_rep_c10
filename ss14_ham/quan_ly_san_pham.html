@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="productName" placeholder="Enter product name">
+<button onclick="addProduct()">Save</button>
+<p id="display"></p>
+<script>
+    // CRUD : Create Read, Update Delete ( thêm, hiển thị, sửa ,xoá)
+    let productList = ["sam sung", "Nokia", "Iphone"]
+    display();
+
+    function addProduct() {
+        let productName = document.getElementById("productName").value;
+        productList.push(productName);
+        display();
+    }
+
+    function deleteProduct(index) {
+        let conf = confirm("Bạn có muốn xoá sp này không ?");
+        if (conf) {
+            productList.splice(index, 1);
+            display();
+        }
+
+    }
+
+    function updateProduct(index) {
+        let newProductName = prompt("Nhập tên sản phẩm mới");
+        productList[index] = newProductName;
+        display();
+
+    }
+
+    function display() {
+        let tableString = `<table style="border: 1px solid black">
+                        <tr>
+                            <th>STT</th>
+                            <th>Name</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>`;
+
+        for (let i = 0; i < productList.length; i++) {
+            tableString +=
+                `<tr>
+                    <td>${i + 1}</td>
+                    <td>${productList[i]}</td>
+                       <td><button onclick="updateProduct(${i})">Edit</button></td>
+                    <td><button onclick="deleteProduct(${i})">Delete</button></td>
+
+                </tr>`
+        }
+
+        document.getElementById("display").innerHTML = tableString;
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // tìm 20 số nguyên tố đầu tiên trong dãy số tự nhiên 0,1,2.......................
+    let soLuong = +prompt("nhập số lượng số nguyên tố cần in ra")
+    let number =2;
+    let countSNT =0;
+    while (countSNT<soLuong){
+        // kiểm tra number có phải là số nguyên tố hay không?
+        let count =0; // đếm số lượng các số chia hết 2,3,4,5,6....n-1
+        for (let i = 2; i <number; i++) {
+            if (number%i==0){
+                count++;
+            }
+        }
+        // kiểm tra số nguyên tố
+        if (count==0){
+            countSNT++;
+           alert(number);
+        }
+        number++
+    }
+
+</script>
+</body>
+</html>
