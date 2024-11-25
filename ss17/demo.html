@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Student {
+        constructor(id,name) {
+            this.id = id
+            this.name = name;
+        }
+        setId(id){
+            this.id = id;
+        }
+        getId(){
+            return this.id;
+        }
+    }
+
+    Math.sqrt(9);// => 3
+
+    let  sv = new Student(1,"chánh");
+    // sv.id = 2;  // thay đổi => không nên
+    sv.setId(2); // thay đổi thông qua phương thức setter
+    // console.log(sv.id);// lấy thông tin=> không nên
+    console.log(sv.getId());
+</script>
+</body>
+</html>

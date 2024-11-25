@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Chuột
+    //     Có thuộc tính tên.
+    //
+    //     Có thuộc tính khối lượng.
+    //
+    //     Có thuộc tính tốc độ.
+    //
+    //     Có thuộc tính mô tả trạng thái: sống, chết.
+    //
+    //     Có khả năng thực hiện hành vi kêu (ví dụ “chít, chít”)
+
+    // Mèo Có thuộc tính tên.
+    //
+    //     Có thuộc tính khối lượng.
+    //
+    //     Có thuộc tính tốc độ di chuyển tối đa.
+    //
+    //     Có khả năng thực hiện hành vi kêu (ví dụ: “meo meo”).
+    //
+    //   Có khả năng bắt chuột, mỗi lần chỉ bắt được một con. Chỉ bắt được chuột khi tốc độ của mèo lớn hơn tốc độ của chuột.
+    //
+    //     Có khả năng ăn thịt chuột. Chỉ ăn chuột còn sống. Khi ăn, khối lượng của mèo tăng lên tương ứng.
+class Animal{
+    constructor(name,weight, speed) {
+        this.name = name;
+        this.weight = weight;
+        this.speed = speed;
+
+    }
+    // setter
+    setName(name){
+        this.name = name;
+    }
+    // getter
+    getName(){
+        return this.name;
+    }
+
+    // tương tư setter và getter cho weight và speed;
+
+    say(text){
+        // chưa biết kêu như thế nào?
+    }
+}
+
+class Rat extends Animal {
+    constructor(name,weight, speed ,status) {
+        super(name,weight, speed);
+        this.status = status;
+    }
+
+    say(text) {
+        console.log("chit chit : "+ text)
+    }
+
+}
+class Cat extends  Animal{
+    constructor(name,weight, speed) {
+        super(name,weight, speed );
+    }
+    say(text) {
+        console.log("meo meo: "+ text);
+    }
+    // hành vi riêng của mèo
+    eatMouse(chuot){
+        if (chuot.status==true){
+            this.weight +=chuot.weight;
+        }else {
+            this.say("chết rồi không ăn");
+        }
+    }
+    // bắt chuột
+    catchMouse(chuot){
+        if (chuot.speed<this.speed){
+            this.say("bắt được rồi");
+            this.eatMouse(chuot);
+        }else {
+            chuot.say(chuot.name+ " : đố bắt được, tao chạy nhanh hơn mày")
+        }
+    }
+}
+
+// khởi tao 1 con chuột
+    let jerry1 = new Rat("Jerry1",1,5,true);
+    let jerry2 = new Rat("Jerry2",1,0,false);
+    let tome = new Cat("Tom",10,10);
+    tome.catchMouse(jerry1);
+    tome.catchMouse(jerry2);
+    console.log("khối lương mèo : "+ tome.weight);
+</script>
+</body>
+</html>
